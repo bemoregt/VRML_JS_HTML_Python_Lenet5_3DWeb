@@ -4,6 +4,18 @@
 
 Python(PyTorch)으로 실제 MNIST 데이터를 학습시킨 뒤, 그 가중치를 그대로 VRML97(.wrl)과 순수 JavaScript/WebGL 뷰어로 시각화합니다. 장식이나 애니메이션이 아니라, 화면에 보이는 그레이스케일 텍스처가 곧 신경망이 실제로 갖고 있는 가중치 숫자 그 자체이고, "재추론" 버튼을 누르면 그 가중치로 실제 합성곱·풀링·완전연결 연산을 브라우저 안에서 계산해서 결과를 보여줍니다.
 
+## 스크린샷
+
+실제 실행 화면입니다. 재추론 버튼을 누를 때마다 다른 MNIST 숫자가 랜덤으로 들어오고, 그때마다 각 레이어(채널)의 밝기와 예측 결과가 실제로 달라집니다.
+
+| | |
+|---|---|
+| ![입력 0, 예측 0](screenshots/demo-1-digit0.png) | ![입력 8, 예측 8](screenshots/demo-2-digit8.png) |
+| ![입력 9, 예측 9](screenshots/demo-3-digit9.png) | ![입력 4, 예측 4](screenshots/demo-4-digit4.png) |
+| ![위에서 본 시점 - 채널별로 분리된 상자 구조](screenshots/demo-5-topview-channels.png) | ![입력 5, 예측 5](screenshots/demo-6-digit5.png) |
+
+다섯 번째 스크린샷(위 시점)에서 C1·S2·C3·S4 각 레이어가 채널 개수만큼 얇은 상자로 쪼개져 Z축으로 쌓여 있는 걸 옆에서 보듯 확인할 수 있습니다.
+
 ## 데모
 
 ```
